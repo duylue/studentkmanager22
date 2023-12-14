@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+<body>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Subject name</th>
+
+  </tr>
+
+    <tr th:each="pro : ${list}">
+      <td th:text="${pro.sjId}"></td>
+      <td th:text="${pro.sjName}"></td>
+    </tr>
+
+</table>
+<a href="http://localhost:8080/subj/create">Tao moi</a>
+</body>
+</html>
