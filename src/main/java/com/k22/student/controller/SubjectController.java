@@ -19,8 +19,12 @@ public class SubjectController {
     public String getList(Model model){
        ArrayList<Subject> list = SubjService.getList();
        model.addAttribute("list",list);
+       Subject subject = list.get(0);
+       model.addAttribute("sj",subject);
         return "subject/getList";
     }
+
+
     @GetMapping("/create")
     public String create(Model model){
        Subject subject = new Subject();
