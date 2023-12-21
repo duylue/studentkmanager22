@@ -10,6 +10,7 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+
 <form style="width: 600px; margin-left: 300px" th:object="${score}"
 action="http://localhost:8080/student/score/save" method="post">
     <h1>Thêm Điểm Mới</h1>
@@ -23,7 +24,7 @@ action="http://localhost:8080/student/score/save" method="post">
     </div>
     <div class="mb-3">
         <label class="form-label">Score</label>
-        <input type="number" class="form-control" th:field="*{score}">
+        <input type="text" class="form-control" th:field="*{score}">
     </div>
     <div class="form-check" th:each="tc :${tList}">
         <input class="form-check-input" type="radio" th:field="*{typeId}" th:value="${tc.getTid()}">
@@ -36,7 +37,6 @@ action="http://localhost:8080/student/score/save" method="post">
             <option th:each=" s : ${sList}" th:value="${s.sjId}"
                     th:text="${s.getSjName()}"></option>
         </select>
-
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

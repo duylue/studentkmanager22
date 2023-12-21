@@ -12,5 +12,7 @@ public class Score {
     private int sjId;
     private String typeName;
     private String sjName;
+    private int studentId;
+    private String sName;
 
 }
