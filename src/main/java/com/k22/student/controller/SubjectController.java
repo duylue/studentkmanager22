@@ -2,6 +2,7 @@ package com.k22.student.controller;
 
 import com.k22.student.config.JDBCCon;
 import com.k22.student.model.Subject;
+import com.k22.student.service.ScoreService;
 import com.k22.student.service.SubjService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 @RequestMapping("/subj")
 @Controller
 public class SubjectController {
+
     @GetMapping
     public String getList(Model model){
        ArrayList<Subject> list = SubjService.getList();
